@@ -1,0 +1,31 @@
+# Core RAG Dependencies
+langchain>=0.1.0
+llama-index>=0.9.0
+openai>=1.0.0
+
+# Vector Storage
+pinecone-client>=3.0.0
+chromadb>=0.4.0
+faiss-cpu>=1.7.0
+
+# Document Processing
+python-dotenv>=1.0.0
+PyPDF2>=3.0.0
+python-docx>=0.8.11
+
+# Data Processing
+numpy>=1.24.0
+pandas>=2.0.0
+
+# Utilities
+requests>=2.31.0
+pydantic>=2.0.0
+
+# Testing
+pytest>=7.0.0
+pytest-cov>=4.0.0
+
+# Development
+black>=23.0.0
+flake8>=6.0.0
+isort>=5.12.0
