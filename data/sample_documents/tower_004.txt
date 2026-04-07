@@ -1,0 +1,42 @@
+Tower T004 - Transmission Tower Specification and Maintenance Report
+
+Location: Tower_004
+Coordinates: 28.7082, 77.1103
+Transmission Line: Delhi-Gurgaon 220kV Main Line
+Tower Height: 45 meters
+Foundation Depth: 3.5 meters
+
+STRUCTURAL SPECIFICATIONS:
+Standard lattice tower design with 150x150x12mm main members. This tower is located near an industrial complex requiring enhanced monitoring for vibration and electromagnetic interference.
+
+ELECTRICAL SPECIFICATIONS:
+Three 220kV phase conductors. The tower carries additional communication cables in the earth wire space. Uses standard ceramic disk insulators. Grounding system consists of four ground rods with total resistance of 2.4 ohms.
+
+INSPECTION AND MAINTENANCE HISTORY:
+Date: 2024-03-10
+Inspection: Moderate corrosion detected on connection plates. Some bolts showing signs of loosening due to vibration from adjacent industrial machinery.
+Action Taken: Bolts retightened, connection plates cleaned and protective coating applied.
+
+Date: 2024-01-25
+Vibration Study: High-frequency vibrations detected (12-15 Hz) due to operation of industrial equipment nearby. Frequency response monitoring established.
+
+FAULT HISTORY:
+2024-02-15: Phase A fault caused by loose insulator clamp (hardware fault). Duration: 2 seconds. Manually operated breaker required to clear fault.
+2023-09-30: Transient overvoltage due to lightning strike at 500m distance. Surge arresters functioned correctly.
+
+CRITICAL ISSUES:
+- Loose fasteners due to vibration require more frequent inspection (monthly vs quarterly)
+- Paint degradation accelerated by industrial pollution
+- Insulator caps showing minor tracking marks from pollution buildup
+
+MONITORING PLAN:
+Quarterly vibration analysis required. Monthly fastener inspection. Increased maintenance frequency for paint coating (annually vs 3-yearly).
+
+RISK ASSESSMENT:
+Current Risk Level: MEDIUM
+The industrial proximity creates additional maintenance burden. Hardware integrity is critical concern.
+
+ADJACENT TOWERS:
+- Tower T002: 265 meters to the west (coordinates 28.7082, 77.1042)
+- Tower T003: 520 meters to the west (coordinates 28.7001, 77.1130)
+- Tower T005: 290 meters to the north (coordinates 28.7142, 77.1103)

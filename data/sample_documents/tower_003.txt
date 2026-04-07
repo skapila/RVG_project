@@ -1,0 +1,41 @@
+Tower T003 - Transmission Tower Specification and Maintenance Report
+
+Location: Tower_003
+Coordinates: 28.7001, 77.1009
+Transmission Line: Delhi-Gurgaon 220kV Main Line
+Tower Height: 45 meters
+Foundation Depth: 3.5 meters
+
+STRUCTURAL SPECIFICATIONS:
+This tower exhibits slightly different design characteristics due to terrain variations. Main vertical members are 150x150x12mm angles. The tower has reinforced lateral bracing at levels 2 and 4 due to uneven ground conditions on the southwest side.
+
+ELECTRICAL SPECIFICATIONS:
+Three 220kV phase conductors with ACSR 240 sq.mm conductor. Uses composite insulators instead of traditional ceramic units for enhanced pollution resistance. Earth wire: ACSR 50 sq.mm. Grounding resistance: 2.8 ohms (slightly higher due to rocky terrain).
+
+INSPECTION AND MAINTENANCE HISTORY:
+Date: 2024-03-20
+Latest Inspection: Tower in good condition. Composite insulators performing well. No significant corrosion observed on main members.
+Action Taken: Routine maintenance - cleaning and inspection only.
+
+Date: 2024-02-15
+Load Test: Conducted under medium wind conditions. All structural components performed within design parameters.
+
+FAULT HISTORY:
+2023-11-05: No major fault events in past 12 months. Good operational history.
+
+SPECIAL FEATURES:
+- Uses composite insulators reducing maintenance frequency
+- Enhanced grounding system with additional earth rods
+- Telescopic tower section allows for future height extension if needed
+
+RISK ASSESSMENT:
+Current Risk Level: LOW
+This tower shows excellent maintenance history and structural integrity. Composite insulators reduce pollution-related faults common in the region.
+
+ENVIRONMENTAL FACTORS:
+The tower is located on elevated terrain (elevation: 240m above sea level) which provides natural drainage and reduces moisture-related corrosion. Surrounding vegetation (eucalyptus trees) provides some wind shielding during monsoon season.
+
+ADJACENT TOWERS:
+- Tower T001: 250 meters to the northeast (coordinates 28.7041, 77.1025)
+- Tower T002: 320 meters to the south (coordinates 28.7082, 77.1042)
+- Tower T004: 520 meters to the east (coordinates 28.7001, 77.1130)

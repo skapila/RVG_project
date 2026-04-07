@@ -1,0 +1,40 @@
+Tower T002 - Transmission Tower Specification and Maintenance Report
+
+Location: Tower_002
+Coordinates: 28.7082, 77.1042
+Transmission Line: Delhi-Gurgaon 220kV Main Line
+Tower Height: 45 meters
+Foundation Depth: 3.5 meters
+
+STRUCTURAL SPECIFICATIONS:
+Similar to Tower T001, this tower features a steel lattice structure with 150x150x12mm main vertical members and 100x100x10mm horizontal bracing. The design is identical to other towers on the same transmission line for consistency and ease of maintenance.
+
+ELECTRICAL SPECIFICATIONS:
+Carries three 220kV phase conductors with ACSR 240 sq.mm conductor size. The tower is equipped with ceramic disk insulators rated at 220kV, suspended in a vertical string arrangement. The earth wire is ACSR 50 sq.mm. Grounding resistance is 2.3 ohms.
+
+INSPECTION AND MAINTENANCE HISTORY:
+Date: 2024-02-10
+Last Inspection: Found corrosion on bolted connections at height 15-18 meters. Some paint peeling observed at various locations.
+Action Taken: Applied protective coating on corroded areas. Bolts were cleaned and tightened.
+
+Date: 2024-03-05
+Vibration Analysis: Conducted vibration measurements during high wind conditions. Frequency response within acceptable limits. No resonance issues detected.
+
+FAULT HISTORY:
+2024-01-22: Single phase fault (Phase C) due to insulator degradation. Fault duration: 45ms. Cause: Surface contamination and moisture ingress.
+Action: Replaced the affected insulator unit.
+
+RECENT CONDITION:
+Tower is in moderate condition. Ongoing corrosion at higher levels requires monitoring. Last major refurbishment was in 2019. Next major maintenance scheduled for Q3 2024.
+
+RISK ASSESSMENT:
+Current Risk Level: MEDIUM-HIGH
+Primary Concerns:
+- Aging of structural steel
+- Accelerated corrosion in wet season
+- Insulator surface degradation
+
+ADJACENT TOWERS:
+- Tower T001: 280 meters to the southwest (coordinates 28.7041, 77.1025)
+- Tower T003: 320 meters to the north (coordinates 28.7142, 77.1085)
+- Tower T004: 265 meters to the east (coordinates 28.7082, 77.1103)

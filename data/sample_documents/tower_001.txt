@@ -1,0 +1,35 @@
+Tower T001 - Transmission Tower Specification and Maintenance Report
+
+Location: Tower_001
+Coordinates: 28.7041, 77.1025
+Transmission Line: Delhi-Gurgaon 220kV Main Line
+Tower Height: 45 meters
+Foundation Depth: 3.5 meters
+
+STRUCTURAL SPECIFICATIONS:
+The tower is constructed with steel lattice structure using high-grade steel angles and channels. The main vertical members are fabricated from 150x150x12mm angles with a yield strength of 250 MPa. The horizontal bracing consists of 100x100x10mm angles providing lateral stability. The tower is designed to withstand wind speeds up to 150 km/hr and temperature variations from -5°C to +50°C.
+
+ELECTRICAL SPECIFICATIONS:
+The tower carries three 220kV transmission lines with phase spacing of 4.5 meters. Each phase is suspended using ceramic disk insulators rated at 220kV. The earth wire is suspended at the top using ACSR conductor of 50 sq.mm. The tower is equipped with a grounding system consisting of four ground rods driven 10 meters deep into the earth with a total resistance of 2.5 ohms.
+
+INSPECTION AND MAINTENANCE HISTORY:
+Date: 2024-01-15
+Last Inspection: General visual inspection revealed no major defects. Minor rust on lower members detected.
+Action Taken: Surface cleaning and repainting of affected areas.
+
+Date: 2024-02-28
+Insulator Condition: All ceramic disk insulators found to be in good condition. No tracking or puncture defects observed.
+Action Taken: Routine cleaning performed.
+
+FAULT HISTORY:
+2023-06-10: Fault on phase A due to contamination on insulator surface. Fault cleared automatically within 3 cycles.
+2023-08-20: Phase B fault caused by wind-induced swing of conductor. Tower withstood the mechanical stress without any permanent damage.
+
+RECENT OBSERVATIONS (2024-03-15):
+The tower shows signs of aging in lower sections. Corrosion has started on some bolted connections at height 8-12 meters. Recommend enhanced monitoring schedule and protective coating application within next maintenance cycle.
+
+CRITICAL NOTES:
+- Adjacent Tower T002 is located 280 meters to the northeast (coordinates 28.7082, 77.1042)
+- Adjacent Tower T003 is located 250 meters to the southwest (coordinates 28.7001, 77.1009)
+- Ground clearance at midspan is currently 12.5 meters, meeting all safety standards
+- Tower shows medium risk profile for next fiscal year
