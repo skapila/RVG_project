@@ -30,9 +30,11 @@ RVG_project/
 ## Features
 
 - Document Processing: Load and process various document formats
-- Vector Generation: Convert documents to embeddings
-- Retrieval Engine: Efficient semantic search and retrieval
-- RAG Integration: Combine retrieval with generative models
+- Vector Generation: Convert documents to embeddings with spatial context
+- Retrieval Engine: Efficient semantic search with spatial filtering
+- Spatial RAG: Location-aware retrieval for power transmission infrastructure
+- Multi-Modal Embeddings: Text + image + geospatial features
+- RAG Integration: Combine retrieval with generative models for domain-specific answers
 
 ## Installation
 
@@ -63,11 +65,21 @@ response = engine.query("Your question here")
 print(response)
 ```
 
+## Architecture
+
+For detailed architecture design including spatial RAG components, database design, and query pipeline, see [SPATIAL_RAG_ARCHITECTURE.md](./SPATIAL_RAG_ARCHITECTURE.md).
+
+### Key Components:
+- **Spatial Indexing:** Geographic proximity-based retrieval
+- **Multi-Stage Retrieval:** Spatial filtering + semantic ranking
+- **Temporal Context:** Time-series data and incident history
+- **Domain Integration:** Power transmission line analysis
+
 ## Development
 
 - Python 3.9+
 - See `requirements.txt` for dependencies
- - Recommended VS Code settings are available in `.vscode/`
+- Recommended VS Code settings are available in `.vscode/`
 
 ## VS Code Setup
 
