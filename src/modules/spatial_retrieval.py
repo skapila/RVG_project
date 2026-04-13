@@ -225,7 +225,9 @@ class SpatialRetrievalEngine:
         lat, lon = coordinates
         
         for vector in self.vectors:
-            if "tower_id" in vector.get("metadata", {}):
+            metadata = vector.get("metadata", {})
+            tower_id = metadata.get("tower_id") or metadata.get("tower_info", {}).get("tower_id")
+            if tower_id:
                 vector_coords = vector.get("coordinates")
                 if vector_coords:
                     distance = self.haversine_distance(
@@ -235,10 +237,10 @@ class SpatialRetrievalEngine:
                     
                     if distance <= radius_km:
                         nearby.append({
-                            "tower_id": vector["metadata"]["tower_id"],
+                            "tower_id": tower_id,
                             "coordinates": vector_coords,
                             "distance_km": distance,
-                            "metadata": vector.get("metadata", {})
+                            "metadata": metadata
                         })
         
         nearby.sort(key=lambda x: x["distance_km"])

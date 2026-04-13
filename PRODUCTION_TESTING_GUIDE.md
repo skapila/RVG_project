@@ -27,7 +27,19 @@ python3 tests/test_document_loading.py
 
 # Run query tests
 python3 tests/test_spatial_queries.py
+
+# Run structured retrieval tests
+python3 -m pytest tests/test_structured_queries.py -q
 ```
+
+### First Iteration Coverage
+
+This iteration adds the MVP "filter-first" retrieval layer described in the execution plan:
+- normalized tower metadata extraction from raw inspection documents
+- exact filters for tower, phase, component, defect, severity, and hotspot flag
+- optional radius-based filtering before semantic ranking
+
+This is the right foundation for the next iteration, where real tower inspection data can be mapped into a cleaner schema.
 
 ### Test Results Summary
 ```
