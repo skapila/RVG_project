@@ -1,0 +1,38 @@
+[
+  {
+    "tower_id": "T201",
+    "line_name": "STU 220kV Spur Line",
+    "circuit_id": "CKT-3",
+    "latitude": 28.7155,
+    "longitude": 77.1142,
+    "inspection_date": "2024-04-10",
+    "severity": "high",
+    "hotspot_flag": true,
+    "component_type": ["insulator", "clamp"],
+    "phase": ["R"],
+    "defect_type": ["insulator_degradation", "hotspot"],
+    "thermal_max": 95,
+    "tower_condition_summary": "R phase polymer insulator string shows surface tracking and local heating.",
+    "observation_note": "Drone thermal survey detected concentrated hotspot around clamp connection.",
+    "remark": "Schedule urgent replacement within seven days.",
+    "image_path": "images/T201_drone_thermal.png"
+  },
+  {
+    "tower_id": "T202",
+    "line_name": "STU 220kV Spur Line",
+    "circuit_id": "CKT-3",
+    "latitude": 28.7168,
+    "longitude": 77.1161,
+    "inspection_date": "2024-04-09",
+    "severity": "medium",
+    "hotspot_flag": false,
+    "component_type": ["earth_wire", "steel_member"],
+    "phase": ["Y"],
+    "defect_type": ["corrosion"],
+    "thermal_max": 41,
+    "tower_condition_summary": "Localized corrosion on earth wire support bracket and lower steel member.",
+    "observation_note": "No thermal alarm; issue is primarily material degradation from moisture exposure.",
+    "remark": "Monitor in next maintenance cycle and apply protective coating.",
+    "image_path": "images/T202_visual_zoom.jpg"
+  }
+]

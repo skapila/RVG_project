@@ -14,7 +14,9 @@ class TestDocumentProcessor:
         """Test processor initialization"""
         processor = DocumentProcessor()
         assert processor is not None
-        assert processor.SUPPORTED_FORMATS == {".txt", ".pdf", ".docx", ".md"}
+        assert processor.SUPPORTED_FORMATS == {
+            ".txt", ".pdf", ".docx", ".md", ".csv", ".json"
+        }
 
     def test_load_documents(self):
         """Test document loading"""

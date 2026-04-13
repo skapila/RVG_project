@@ -30,6 +30,9 @@ python3 tests/test_spatial_queries.py
 
 # Run structured retrieval tests
 python3 -m pytest tests/test_structured_queries.py -q
+
+# Run structured ingestion tests
+python3 -m pytest tests/test_structured_ingestion.py -q
 ```
 
 ### First Iteration Coverage
@@ -40,6 +43,14 @@ This iteration adds the MVP "filter-first" retrieval layer described in the exec
 - optional radius-based filtering before semantic ranking
 
 This is the right foundation for the next iteration, where real tower inspection data can be mapped into a cleaner schema.
+
+### Second Iteration Coverage
+
+This iteration adds a realistic sample structured data folder:
+- `data/sample_structured_records/towers.csv`
+- `data/sample_structured_records/observations.json`
+
+The ingestion pipeline now reads `.csv` and `.json` tower records and converts them into documents plus normalized metadata for structured retrieval.
 
 ### Test Results Summary
 ```

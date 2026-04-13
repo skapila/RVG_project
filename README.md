@@ -17,6 +17,8 @@ RVG_project/
 │       └── retrieval_engine.py
 ├── data/
 │   ├── documents/
+│   ├── sample_documents/
+│   ├── sample_structured_records/
 │   └── vectors/
 ├── tests/
 │   ├── __init__.py
@@ -52,18 +54,31 @@ RVG_project/
 ## Usage
 
 ```python
-from src.main import RAGEngine
+from src.spatial_rag_engine import SpatialRAGEngine
 
-# Initialize the RAG engine
-engine = RAGEngine()
+# Initialize the spatial RAG engine
+engine = SpatialRAGEngine()
 
-# Process documents
-engine.add_documents("path/to/documents")
+# Process narrative documents or structured CSV/JSON records
+engine.add_documents_with_coordinates("data/sample_structured_records")
 
-# Retrieve and generate responses
-response = engine.query("Your question here")
-print(response)
+# Retrieve structured tower results
+result = engine.query_structured(
+    query_text="find hotspot towers with insulator issues in R phase",
+    coordinates=(28.7041, 77.1025),
+    radius_km=2.0,
+)
+print(result["results"])
 ```
+
+## Sample Data
+
+- Narrative reports: `data/sample_documents/`
+- Structured iteration 2 sample records: `data/sample_structured_records/`
+
+The structured sample folder includes:
+- `towers.csv` for tabular tower-level facts
+- `observations.json` for richer observation-style records
 
 ## Architecture
 

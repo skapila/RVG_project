@@ -58,9 +58,12 @@ class SpatialRAGEngine:
         for doc in documents:
             if not doc:
                 continue
-            
+            explicit_metadata = self.metadata_extractor.normalize_record_metadata(
+                doc.get("metadata", {})
+            )
+
             # Extract coordinates from document if available
-            doc_coords = self.metadata_extractor.extract_coordinates(
+            doc_coords = explicit_metadata.get("coordinates") or self.metadata_extractor.extract_coordinates(
                 doc.get("content", "")
             ) or coordinates
             
@@ -72,6 +75,11 @@ class SpatialRAGEngine:
                 doc.get("content", ""),
                 doc_coords
             )
+            spatial_metadata.update({
+                key: value for key, value in explicit_metadata.items()
+                if value not in (None, "", [])
+            })
+            spatial_metadata["coordinates"] = doc_coords
 
             self.tower_records.append({
                 "source": doc.get("path"),

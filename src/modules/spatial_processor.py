@@ -213,6 +213,71 @@ class SpatialMetadataExtractor:
             "condition_summary": cls.extract_condition_summary(text),
         }
 
+    @classmethod
+    def normalize_record_metadata(cls, record: Dict) -> Dict:
+        """Normalize structured record fields from CSV/JSON sources."""
+        if not record:
+            return {}
+
+        normalized = {}
+
+        tower_id = record.get("tower_id") or record.get("tower_number")
+        if tower_id:
+            normalized["tower_id"] = str(tower_id).upper()
+
+        line_name = record.get("line_name")
+        if line_name:
+            normalized["line_name"] = str(line_name)
+
+        latitude = record.get("latitude", record.get("lat"))
+        longitude = record.get("longitude", record.get("lon"))
+        try:
+            if latitude not in (None, "") and longitude not in (None, ""):
+                normalized["coordinates"] = (float(latitude), float(longitude))
+        except (TypeError, ValueError):
+            pass
+
+        inspection_date = record.get("inspection_date")
+        if inspection_date:
+            try:
+                normalized["inspection_date"] = datetime.fromisoformat(
+                    str(inspection_date)
+                ).isoformat()
+            except ValueError:
+                normalized["inspection_date"] = str(inspection_date)
+
+        severity = record.get("severity") or record.get("risk_level")
+        if severity:
+            normalized["severity"] = cls._normalize_severity(str(severity))
+
+        hotspot = record.get("hotspot_flag")
+        if hotspot is not None:
+            normalized["hotspot_flag"] = str(hotspot).strip().lower() in {
+                "true", "1", "yes", "y"
+            }
+
+        component = record.get("component_type")
+        if component:
+            normalized["component_types"] = cls._normalize_list_field(component)
+
+        defect = record.get("defect_type")
+        if defect:
+            normalized["defect_types"] = cls._normalize_list_field(defect)
+
+        phase = record.get("phase")
+        if phase:
+            normalized["phases"] = cls._normalize_phase_list(phase)
+
+        summary = (
+            record.get("tower_condition_summary")
+            or record.get("observation_note")
+            or record.get("remark")
+        )
+        if summary:
+            normalized["condition_summary"] = str(summary)
+
+        return normalized
+
     @staticmethod
     def extract_dates(text: str) -> List[datetime]:
         """Extract ISO dates from free text."""
@@ -328,6 +393,40 @@ class SpatialMetadataExtractor:
         if cleaned == "moderate":
             return "medium"
         return cleaned
+
+    @staticmethod
+    def _normalize_list_field(value) -> List[str]:
+        if isinstance(value, list):
+            items = value
+        else:
+            items = re.split(r"[|,/]", str(value))
+        return [
+            item.strip().lower().replace(" ", "_")
+            for item in items
+            if str(item).strip()
+        ]
+
+    @staticmethod
+    def _normalize_phase_list(value) -> List[str]:
+        if isinstance(value, list):
+            items = value
+        else:
+            items = re.split(r"[|,/ ]+", str(value))
+
+        mapping = {
+            "A": "R",
+            "B": "Y",
+            "C": "B",
+            "R": "R",
+            "Y": "Y",
+            "B": "B",
+        }
+        phases = []
+        for item in items:
+            normalized = mapping.get(str(item).strip().upper())
+            if normalized and normalized not in phases:
+                phases.append(normalized)
+        return phases
 
     @staticmethod
     def create_spatial_metadata(
